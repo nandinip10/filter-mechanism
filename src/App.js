@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// importing routes
+import { Route, Routes } from "react-router-dom";
+// importing components
+import Header from "./components/Header";
+import Search from "./components/Search";
+import HouseList from "./components/HouseList";
+// importing pages
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="max-w-[1440px] mx-auto bg-white">
+      <Header />
+      <h1 className="text-4xl font-[560] py-6 max-w-[1170px] mx-auto">
+        Search properties to rent
+      </h1>
+      <Search />
+      <HouseList />
     </div>
   );
 }
